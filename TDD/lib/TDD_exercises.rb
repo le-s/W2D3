@@ -1,3 +1,4 @@
+require "byebug"
 class Array
   def my_uniq
     result = []
@@ -33,5 +34,21 @@ class Array
     end
     
     result
+  end
+  
+  def stock_picker
+    profitable = []
+    highest = 0
+    
+    self.each_with_index do |num1, idx1|
+      (idx1+1..self.length - 1).each do |idx2|
+        if self[idx2] - num1 > highest
+          highest = self[idx2] - num1
+          profitable = [idx1, idx2]
+        end
+      end
+    end
+    
+    profitable
   end
 end

@@ -42,7 +42,7 @@ RSpec.describe Array do
     it "finds the most profitable pair" do
       expect(array.stock_picker).to eq([2,3])
     end
-  end 
+  end
 end
 
   
