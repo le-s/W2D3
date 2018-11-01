@@ -26,8 +26,21 @@ RSpec.describe Deck do
     end
     
     it "should shuffle deck" do 
-      expect(all_cards.deck)not_to eq(all_cards.deck.sort)
+      expect(all_cards.deck).not_to eq(all_cards.deck.sort)
     end
+  end
+  
+  describe "#take_cards(num)" do
+    let(:deck) { [[1, "S"], [8, "H"], [11, "C"], [5, "D"]] }
+    allow(deck).to receive(:take_cards)
+    it "deals num amount of cards that player requests" do
+      deck.take_cards(1)
+      expect(deck.length).to eq(3)
+    end
+  end
+  
+  describe "#deal" do
+    
   end
 end
 

@@ -11,9 +11,9 @@ class Hand
       hand_face_values << card.face_value
     end
     
-    if hand_face_values.uniq.length == 5
-      #we know this has to be a high card hand
-    elsif
+    # if hand_face_values.uniq.length == 5
+    #   #we know this has to be a high card hand
+    # end
   end
   
   

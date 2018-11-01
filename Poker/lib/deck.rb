@@ -21,7 +21,7 @@ class Deck
     @deck.shuffle!
   end
   
-  def take(num)
+  def take_cards(num)
     num.times {deal} if num <=3
   end
   
