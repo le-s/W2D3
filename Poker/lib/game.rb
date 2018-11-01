@@ -14,7 +14,10 @@ class Game
   end
   
   def deal_starting_hands
-    
+    5.times do
+      @player1.hand << @deck.deal
+      @player2.hand << @deck.deal
+    end
   end  
   
   def deal_next_card

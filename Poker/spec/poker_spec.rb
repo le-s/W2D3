@@ -24,8 +24,11 @@ RSpec.describe Deck do
     it "contains 52 unique cards" do
       expect(all_cards.deck.uniq.length).to eq(52)
     end
+    
+    it "should shuffle deck" do 
+      expect(all_cards.deck)not_to eq(all_cards.deck.sort)
+    end
   end
-
 end
 
 RSpec.describe Game do

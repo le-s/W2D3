@@ -20,4 +20,12 @@ class Deck
     
     @deck.shuffle!
   end
+  
+  def take(num)
+    num.times {deal} if num <=3
+  end
+  
+  def deal
+    @deck.pop
+  end
 end
